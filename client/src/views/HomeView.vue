@@ -1,8 +1,9 @@
 <script setup lang="ts">
+import ProductList from '../components/ProductList.vue';
 </script>
 
 <template>
     <main>
-        <h1>life is good</h1>
+       <ProductList/>
     </main>
 </template>

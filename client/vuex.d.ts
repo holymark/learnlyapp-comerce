@@ -1,15 +1,8 @@
-import { Store } from 'vuex'
-
-declare module "vuex" {
-  export * from "vuex/types/index.d.ts";
-  export * from "vuex/types/helpers.d.ts";
-  export * from "vuex/types/logger.d.ts";
-  export * from "vuex/types/vue.d.ts";
-}
+import { Store, createStore, useStore } from 'vuex'
 
 declare module '@vue/runtime-core' {
   interface State {
-    user: string
+    user: string | null
   }
 
   export interface ComponentCustomProperties {
@@ -17,4 +10,4 @@ declare module '@vue/runtime-core' {
   }
 }
 
-export { Store }
+export { Store, createStore, useStore }
