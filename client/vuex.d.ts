@@ -10,4 +10,5 @@ declare module '@vue/runtime-core' {
   }
 }
 
+
 export { Store, createStore, useStore }

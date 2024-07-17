@@ -1,37 +1,35 @@
-<script setup lang="ts">
+<script lang="ts">
+import {type Product  } from "../../index"
+
 export default {
   data() {
     return {
-      filteredProducts: [],
-    };
+      filteredProducts: []
+    }
   },
   computed: {
     products() {
-      return this.$store.state.products;
-    },
+      return this.$store.state.products
+    }
   },
   methods: {
-    filterProducts(searchTerm) {
-      this.filteredProducts = this.products.filter(product =>
+    filterProducts(searchTerm: string) {
+      this.filteredProducts = this.products.filter((product: Product) =>
         product.name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    },
+      )
+    }
   },
   created() {
-    this.$store.dispatch('fetchProducts');
-  },
-};
+    this.$store.dispatch('fetchProducts')
+  }
+}
 </script>
 
 <template>
-    <div>
-      <SearchBar @search="filterProducts"/>
-      <div v-for="product in filteredProducts" :key="product.id">
-        <h2>{{ product.name }}</h2>
-        <p>{{ product.description }}</p>
-        <p>{{ product.price }}</p>
-        <img :src="product.imageURL" alt="product image"/>
-      </div>
-    </div>
-  </template>
-  
+  <div>
+    <SearchBar @search="filterProducts" />
+    <ul>
+      <li v-for="product in products" :key="product._id">{{ product.name }}</li>
+    </ul>
+  </div>
+</template>
