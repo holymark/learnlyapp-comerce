@@ -3,10 +3,12 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   data() {
-    
+    return {
+      searchTerm: ''
+    }
   },
   methods: {
-    onSearch(event: {target: {value: string}}) {
+    onSearch(event: { target: { value: string } }) {
       this.$emit('search', event.target.value)
     }
   }

@@ -1,27 +1,17 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import Header from './components/Header.vue'
+import ProductListVue from './components/ProductList.vue'
 </script>
 
 <template>
-  <header>
-    <div class="text-"></div>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/login">Login</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <div>
 
-  <RouterView />
+    <Header />
+    
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
 nav {
   width: 100%;
   font-size: 12px;

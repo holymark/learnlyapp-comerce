@@ -4,8 +4,11 @@ import ProductListVue from '../components/ProductList.vue'
 
 <template>
   <div class="ls">
+    <div class="text-center p-10">
+      <h1 class="font-bold text-4xl mb-4">Find Your Favorite Fruits</h1>
+      <h1 class="text-3xl">Tailwind CSS</h1>
+    </div>
     <ProductListVue />
-    <h1>Login to your account</h1>
   </div>
 </template>
 
@@ -13,8 +16,6 @@ import ProductListVue from '../components/ProductList.vue'
 @media (min-width: 1024px) {
   .ls {
     min-height: 100vh;
-    display: flex;
-    align-items: center;
   }
 }
 </style>
