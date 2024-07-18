@@ -11,7 +11,7 @@
 - [Running the Application](#running-the-application)
 - [License](#license)
 
-### see the live working app at : https://ecommerce-product-listing-app.vercel.app/
+### see the live working app at : https://learnlyapp-comerce.vercel.app/
 
 ## Introduction
 
