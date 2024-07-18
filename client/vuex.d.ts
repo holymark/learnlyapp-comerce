@@ -1,14 +1,14 @@
 import { Store, createStore, useStore } from 'vuex'
 
 declare module '@vue/runtime-core' {
-  interface State {
-    user: string | null
-  }
 
-  export interface ComponentCustomProperties {
-    $store: Store<State>
+    interface State {
+      count: number
+    }
+  
+    interface ComponentCustomProperties {
+      $store: Store<State>
+    }
   }
-}
-
 
 export { Store, createStore, useStore }

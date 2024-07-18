@@ -1,9 +1,20 @@
 <script setup lang="ts">
-import ProductList from '../components/ProductList.vue'
+import ProductListVue from '../components/ProductList.vue'
 </script>
 
 <template>
-  <main>
-    <ProductList />
-  </main>
+  <div class="ls">
+    <ProductListVue />
+    <h1>Login to your account</h1>
+  </div>
 </template>
+
+<style>
+@media (min-width: 1024px) {
+  .ls {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+}
+</style>
