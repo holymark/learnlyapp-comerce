@@ -5,8 +5,8 @@ import ProductListVue from '../components/ProductList.vue'
 <template>
   <div class="ls">
     <div class="text-center p-10">
-      <h1 class="font-bold text-4xl mb-4">Find Your Favorite Fruits</h1>
-      <h1 class="text-3xl">Tailwind C S S</h1>
+      <h1 class="font-bold text-4xl mb-4">Find The Best IPhone</h1>
+      <h1 class="text-3xl">Best Of The Best IPhone Collections</h1>
     </div>
 
     <ProductListVue />
