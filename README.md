@@ -45,10 +45,10 @@ This is a simple e-commerce product listing application with functionalities for
 ### Steps
 
 1. **Clone the repository:**
-   \`\`\`sh
+   ```sh
    git clone https://github.com/yourusername/ecommerce-product-listing.git
    cd ecommerce-product-listing
-   \`\`\`
+   ```
 
 2. **Install dependencies for both frontend and backend:**
    ```sh
@@ -69,13 +69,6 @@ This is a simple e-commerce product listing application with functionalities for
 
 ## Frontend Structure
 
-### Components
-
-- \`ProductList.vue\`
-- \`ProductForm.vue\`
-- \`Login.vue\`
-- \`Header.vue\`
-- \`SearchBar.vue\`
 
 ### Tailwind CSS
 
@@ -89,8 +82,8 @@ Vuex is used for state management, particularly to manage products and user auth
 
 ### Routes
 
-- \`/api/products\`: CRUD operations for products.
-- \`/api/users\`: User authentication.
+- `/api/products\`: CRUD operations for products.
+- `/api/users\`: User authentication.
 
 ### Middlewares
 
@@ -132,21 +125,17 @@ Vuex is used for state management, particularly to manage products and user auth
 
 ### Production
 
-1. **Build the frontend:**
+1. **Build the client:**
    ```sh
-   cd frontend
+   cd client
    npm run build
    ```
 
 2. **Run the backend server:**
    ```sh
-   cd backend
+   cd server
    npm start
    ```
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request for review.
 
 ## License
 
