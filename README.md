@@ -1,15 +1,14 @@
-# Full Stack E-commerce Product Listing Application for - LearnlyApp
+## Full Stack E-commerce Product Listing Application for - LearnlyApp
 
 ## Table of Contents
 - [Introduction](#introduction)
-- [Features](#features)
+- [Features](#key-features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Frontend Structure](#frontend-structure)
 - [Backend Structure](#backend-structure)
 - [API Endpoints](#api-endpoints)
 - [Running the Application](#running-the-application)
-- [Contributing](#contributing)
 - [License](#license)
 
 ### see the live working app at : https://ecommerce-product-listing-app.vercel.app/
@@ -18,7 +17,7 @@
 
 This is a simple e-commerce product listing application with functionalities for product listing, searching, adding, updating, and deleting products, as well as user authentication.
 
-## Features
+## Key Features
 
 - **Product Listing**: Displays products with details such as name, description, price, and image.
 - **Add New Products**: Authenticated users can add new products.
@@ -46,7 +45,7 @@ This is a simple e-commerce product listing application with functionalities for
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/ecommerce-product-listing.git
+   git clone https://github.com/holymark/learnlyapp-comerce.git
    cd ecommerce-product-listing
    ```
 
@@ -60,7 +59,7 @@ This is a simple e-commerce product listing application with functionalities for
 
 3. **Configure Environment Variables:**
 
-   Create a \`.env\` file in the \`backend\` directory and add the following:
+   Create a `.env` file in the `backend` directory and add the following:
    ```env
    PORT=5000
    MONGO_URI=your_mongodb_connection_string
@@ -80,19 +79,10 @@ Vuex is used for state management, particularly to manage products and user auth
 
 ## Backend Structure
 
-### Routes
+### Important Routes
 
 - `/api/products\`: CRUD operations for products.
 - `/api/users\`: User authentication.
-
-### Middlewares
-
-- \`authMiddleware.js\`: Middleware to protect routes.
-
-### Models
-
-- \`User.js\`: User schema.
-- \`Product.js\`: Product schema.
 
 ## API Endpoints
 
