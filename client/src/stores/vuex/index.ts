@@ -1,42 +1,37 @@
-import type { InjectionKey } from 'vue'
-import { Store, createStore, useStore } from 'vuex'
-import axios from 'axios'
-import type { Products } from '@/types'
+import { createStore, Store as VuexStore, CommitOptions, DispatchOptions } from 'vuex';
+import  { type State, state } from './state';
+import { type Mutations, mutations } from './mutations';
+import { type Actions, actions } from './actions';
+import { type Getters, getters } from './getters';
 
-export interface State {
-  user: string
-  products: Products
+export const store = createStore({
+  state,
+  mutations,
+  actions,
+  getters
+});
+
+export function useStore() {
+  return store as Store;
 }
 
-export const key: InjectionKey<Store<State>> = Symbol()
-
-export const store = createStore<State>({
-  state: {
-    user: null,
-    products: []
-  },
-  mutations: {
-    setProducts(state: State, products: Products) {
-      state.products = products
-    },
-    setUser(state: State, user: string) {
-      state.user = user
-    }
-  },
-
-  actions: {
-    fetchProducts({ commit }: { commit: Function }) {
-      axios.get('/api/products').then((response) => {
-        commit('setProducts', response.data)
-      })
-    },
-    async login(
-      { commit }: { commit: Function },
-      credentials: { email: string; password: string }
-    ) {
-      return axios.post('/api/login', credentials).then((response) => {
-        commit('setUser', response.data.user)
-      })
-    }
-  }
-})
+export type Store = Omit<
+  VuexStore<State>,
+  'commit' | 'dispatch' | 'getters'
+> & {
+  commit<K extends keyof Mutations, P extends Parameters<Mutations[K]>[1]>(
+    key: K,
+    payload: P,
+    options?: CommitOptions
+  ): ReturnType<Mutations[K]>;
+} & {
+  dispatch<K extends keyof Actions>(
+    key: K,
+    payload: Parameters<Actions[K]>[1],
+    options?: DispatchOptions
+  ): ReturnType<Actions[K]>;
+} & {
+  getters: {
+    [K in keyof Getters]: ReturnType<Getters[K]>;
+  };
+};

@@ -82,16 +82,16 @@ Vuex is used for state management, particularly to manage products and user auth
 ### Important Routes
 - `/ping\`: Health check endpoint.
 - `/api/products\`: CRUD operations for products.
-- `/api/users\`: User authentication.
+- `/api/auth\`: User authentication.
 
 ## API Endpoints
 
 ### Products
 
 - **GET /api/products**: Get all products.
-- **POST /api/products**: Add a new product (protected).
-- **PUT /api/products/:id**: Update a product (protected).
-- **DELETE /api/products/:id**: Delete a product (protected).
+- **POST /api/product/create**: Add a new product (protected).
+- **PUT /api/product/:id**: Update a product (protected).
+- **DELETE /api/product/:id**: Delete a product (protected).
 
 ### Users
 

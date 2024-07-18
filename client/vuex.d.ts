@@ -1,14 +1,35 @@
-import { Store, createStore, useStore } from 'vuex'
+import type { Products } from '@/types'
+import {
+  Store,
+  createStore,
+  useStore,
+  MutationTree,
+  ActionTree,
+  ActionContext,
+  GetterTree,
+  DispatchOptions,
+  CommitOptions
+} from 'vuex'
 
 declare module '@vue/runtime-core' {
-
-    interface State {
-      count: number
-    }
-  
-    interface ComponentCustomProperties {
-      $store: Store<State>
-    }
+  interface State {
+    user: string
+    products: Products
   }
 
-export { Store, createStore, useStore }
+  interface ComponentCustomProperties {
+    $store: Store<State>
+  }
+}
+
+export {
+  Store,
+  createStore,
+  useStore,
+  MutationTree,
+  ActionTree,
+  ActionContext,
+  GetterTree,
+  DispatchOptions,
+  CommitOptions
+}
