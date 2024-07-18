@@ -5,9 +5,7 @@ import ProductListVue from './components/ProductList.vue'
 
 <template>
   <div>
-
     <Header />
-    
   </div>
 </template>
 

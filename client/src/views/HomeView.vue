@@ -6,9 +6,18 @@ import ProductListVue from '../components/ProductList.vue'
   <div class="ls">
     <div class="text-center p-10">
       <h1 class="font-bold text-4xl mb-4">Find Your Favorite Fruits</h1>
-      <h1 class="text-3xl">Tailwind CSS</h1>
+      <h1 class="text-3xl">Tailwind C S S</h1>
     </div>
+
     <ProductListVue />
+
+    <div class="w-full">
+      <img
+        src="https://img.freepik.com/free-vector/mobile-phone-different-perspectives_52683-51648.jpg?t=st=1721288235~exp=1721291835~hmac=fc5ccfa0c4c9da001c7f1d55e974384e4ba862c721c3ad12c981eb917f57e356&w=996"
+        alt="IPhone"
+        class="w-full h-24 rounded-lg shadow-md"
+      />
+    </div>
   </div>
 </template>
 
