@@ -80,7 +80,7 @@ Vuex is used for state management, particularly to manage products and user auth
 ## Backend Structure
 
 ### Important Routes
-
+- `/ping\`: Health check endpoint.
 - `/api/products\`: CRUD operations for products.
 - `/api/users\`: User authentication.
 
