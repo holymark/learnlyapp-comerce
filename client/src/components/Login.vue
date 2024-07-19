@@ -15,6 +15,7 @@ export default defineComponent({
         password: this.password
       }
       try {
+       // console.log(credentials)
         await this.$store.dispatch('LOGIN', credentials)
         this.$router.push('/')
       } catch (err) {
