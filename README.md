@@ -28,8 +28,11 @@ To login as adming you'll be required to use this values
 {
   "email": "admin@gmail.com",
   "password" : "admin12345",
-//   "isAdmin": "true"
-}```
+// "isAdmin": "true"
+}
+```
+
+
 ## Key Features
 
 - **Product Listing**: Displays products with details such as name, description, price, and image.
