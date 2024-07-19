@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { ActionTypes } from '../stores/vuex/actions'
 
 export default defineComponent({
   data() {
@@ -16,7 +17,7 @@ export default defineComponent({
       }
       try {
        // console.log(credentials)
-        await this.$store.dispatch('LOGIN', credentials)
+        await this.$store.dispatch(ActionTypes.LOGIN, credentials)
         this.$router.push('/')
       } catch (err) {
         console.error(err)

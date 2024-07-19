@@ -1,6 +1,7 @@
 <script lang="ts">
-import { defineComponent, computed, ref } from 'vue'
+import { defineComponent, computed, ref, onMounted } from 'vue'
 import { useStore } from '../stores/vuex'
+import { ActionTypes } from '../stores/vuex/actions'
 import { type Product } from '../stores/vuex/state'
 
 export default defineComponent({
@@ -8,11 +9,16 @@ export default defineComponent({
     const store = useStore()
     const searchQuery = ref('')
 
+    onMounted(() => {
+      //@ts-ignore
+      store.dispatch(ActionTypes.FETCH_PRODUCTS);
+    })
     const filteredProducts = computed(() => {
       if (!searchQuery.value) return store.getters.allProducts
       return store.getters.allProducts.filter((product: Product) =>
         product.name.toLowerCase().includes(searchQuery.value.toLowerCase())
       )
+    
     })
 
     return {
@@ -31,6 +37,7 @@ export default defineComponent({
         class="w-full p-2 text-gray-800 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
         placeholder="Search products..."
         v-model="searchQuery"
+        @input="$emit('input', $event.target.value)"
       />
     </div>
     <section

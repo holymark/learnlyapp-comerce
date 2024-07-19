@@ -14,18 +14,11 @@ connect(process.env.MONGO_URI, {
   useUnifiedTopology: true,
 } as ConnectOptions);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e5ea85638d9beb7c0c6ca220996b53cd54c3ab1b
 
 const app = express();
 
 app.use(cors());
-<<<<<<< HEAD
 app.options('*', cors());
-=======
->>>>>>> e5ea85638d9beb7c0c6ca220996b53cd54c3ab1b
 
 app.use(bodyParser.json());
 

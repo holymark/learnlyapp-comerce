@@ -1,5 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { ActionTypes } from '../stores/vuex/actions'
 import axios from '../stores/vuex/axiosConfig'
 
 export default defineComponent({
@@ -21,11 +22,8 @@ export default defineComponent({
         imageURL: this.imageURL
       }
       try {
-        await this.$store.dispatch('ADD_PRODUCT', product, this.$store.state.user.token)
+        await this.$store.dispatch(ActionTypes.ADD_PRODUCT, product, this.$store.state.user.token)
 
-        // await axios.post('/api/products', product, {
-        //   headers: { Authorization: `Bearer ${this.$store.state.user.token}` }
-        // });
         this.$router.push('/')
       } catch (err) {
         console.error(err)

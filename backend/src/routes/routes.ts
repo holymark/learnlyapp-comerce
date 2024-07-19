@@ -10,12 +10,9 @@ const Default = new DefaultControler();
 const User = new UserController();
 const Product = new ProductControler();
 
-<<<<<<< HEAD
 
   
-=======
->>>>>>> e5ea85638d9beb7c0c6ca220996b53cd54c3ab1b
-  router.use(cors());
+router.use(cors());
 router.options('*', cors());
 
 // /ping is for testing sever health

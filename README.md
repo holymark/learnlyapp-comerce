@@ -23,6 +23,13 @@
 
 This is a simple e-commerce product listing application with functionalities for product listing, searching, adding, updating, and deleting products, as well as user authentication.
 
+To login as adming you'll be required to use this values
+```json
+{
+  "email": "admin@gmail.com",
+  "password" : "admin12345",
+//   "isAdmin": "true"
+}```
 ## Key Features
 
 - **Product Listing**: Displays products with details such as name, description, price, and image.

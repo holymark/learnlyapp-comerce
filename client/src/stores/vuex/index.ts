@@ -32,3 +32,4 @@ export type Store = Omit<VuexStore<State>, 'commit' | 'dispatch' | 'getters'> & 
     [K in keyof Getters]: ReturnType<Getters[K]>
   }
 }
+
