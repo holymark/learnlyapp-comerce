@@ -28,6 +28,7 @@ export type Actions = {
 export const actions: Actions = {
   async [ActionTypes.FETCH_PRODUCTS]({ commit }: { commit: Function }) {
     const { data } = await axios.get<Product[]>('/api/products')
+    console.log(data)
     commit(MutationTypes.SET_PRODUCTS, data)
   },
   async [ActionTypes.ADD_PRODUCT](
