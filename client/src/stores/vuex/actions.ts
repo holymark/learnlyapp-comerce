@@ -44,7 +44,8 @@ export const actions: Actions = {
     { commit }: { commit: Function },
     credentials: { email: string; password: string }
   ) {
-    const { data } = await axios.post<User>('/api/auth/login', credentials)
+    const { data } = await axios.post<User>('/api/auth/login/', credentials)
+    console.log(data)
     commit(MutationTypes.SET_USER, data)
   },
   [ActionTypes.LOGOUT]({ commit }: { commit: Function }) {
