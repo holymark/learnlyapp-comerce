@@ -1,5 +1,11 @@
 ## Full Stack E-commerce Product Listing Application for - LearnlyApp
-
+<!-- 
+{
+  "email": "admin@gmail.com",
+  "password" : "admin12345",
+  "isAdmin": "true"
+}
+ -->
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#key-features)
@@ -11,7 +17,7 @@
 - [Running the Application](#running-the-application)
 - [License](#license)
 
-### see the live working app at : https://learnlyapp-comerce.vercel.app/
+<!-- ### see the live working app at : https://learnlyapp-comerce.vercel.app/ -->
 
 ## Introduction
 

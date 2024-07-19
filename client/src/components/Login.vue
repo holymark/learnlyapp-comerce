@@ -9,27 +9,25 @@ export default defineComponent({
     }
   },
   methods: {
-    submitForm() {
+    async submitForm() {
       const credentials = {
         email: this.email,
         password: this.password
       }
-      this.$store
-        .dispatch('login', credentials)
-        .then(() => {
-          this.$router.push('/')
-        })
-        .catch((err: string) => {
-          console.error(err)
-        })
+      try {
+        await this.$store.dispatch('LOGIN', credentials)
+        this.$router.push('/')
+      } catch (err) {
+        console.error(err)
+      }
     }
   }
 })
 </script>
 
 <template>
-   <div class="container min-w-[537px] mx-auto mt-10 max-w-md p-4 bg-white shadow-md rounded-lg">
-    <h2 class="text-2xl text-gray-800 font-bold mb-6 text-center">Admin Login</h2>
+  <div class="container min-w-[537px] mx-auto mt-10 max-w-md p-4 bg-white shadow-md rounded-lg">
+    <h2 class="text-2xl text-gray-800 font-bold mb-6 text-center">User Login</h2>
     <form @submit.prevent="submitForm" class="space-y-4">
       <div>
         <label for="email" class="block text-gray-700 font-medium">Email</label>
@@ -60,4 +58,3 @@ export default defineComponent({
     </form>
   </div>
 </template>
-

@@ -38,7 +38,6 @@ export default defineComponent({
         </button>
         <div class="hidden md:flex space-x-4">
           <RouterLink to="/">Home</RouterLink>
-          <RouterLink v-if="user" to="/add">Home</RouterLink>
           <RouterLink v-if="user" to="/add">Add Product</RouterLink>
           <RouterLink v-if="!user" to="/login">Login</RouterLink>
           <span v-if="user" @click="logout">Logout</span>

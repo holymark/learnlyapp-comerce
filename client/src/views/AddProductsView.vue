@@ -8,6 +8,4 @@ import ProductForm from '../components/ProductForm.vue'
   </div>
 </template>
 
-<style>
-
-</style>
+<style></style>
