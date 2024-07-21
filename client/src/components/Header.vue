@@ -11,6 +11,11 @@ export default defineComponent({
     logout() {
       this.$store.commit('setUser', null)
       this.$router.push('/login')
+    },
+    showMenu(){
+      var i = 
+      document.getElementById("menuItems");
+      i?.classList.toggle("hidden");
     }
   }
 })
@@ -20,9 +25,9 @@ export default defineComponent({
   <div>
     <header>
       <nav>
-        <button class="md:hidden focus:outline-none">
+        <button @click="showMenu" class="md:hidden focus:outline-none">
           <svg
-            class="h-6 w-6 text-gray-800"
+            class="h-8 w-8 text-[#04a36e]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -36,7 +41,7 @@ export default defineComponent({
             ></path>
           </svg>
         </button>
-        <div class="hidden md:flex space-x-4">
+        <div id="menuItems" class="hidden md:flex space-x-4">
           <RouterLink to="/">Home</RouterLink>
           <RouterLink v-if="user" to="/add">Add Product</RouterLink>
           <RouterLink v-if="!user" to="/login">Login</RouterLink>

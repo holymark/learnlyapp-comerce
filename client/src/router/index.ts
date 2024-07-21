@@ -17,6 +17,7 @@ const router = createRouter({
     {
       path: '/add',
       name: 'add',
+      meta: { requiresAuth: true },
       component: () => import('../views/AddProductsView.vue')
     }
   ]
